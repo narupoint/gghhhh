@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-replace-svg="nest"></script>
+  <title>HTML</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <style type="text/css" media="all">
+  @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap');
+    body {
+      margin: 0;
+      padding: 0;
+      align-items: center;
+    }
+    
+    .hero {
+      height: 110px;
+      background: #42A5F6;
+    }
+    .mt24 {
+      margin-top: -84px
+    }
+    
+
+[data-tab-content] {
+  display: none;
+}
+
+.active[data-tab-content] {
+  display: block;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 0;
+  padding: 7px;
+  border-radius: 100px;
+  background: #F1F1F1;
+  width: 210px;
+  margin-top: 10px;
+}
+
+.tabs .tab-indicator {
+  position:relative;
+  width:calc(100% / 4);
+  height:5px;
+  background:#00acee;
+  left:0px;
+  border-radius:5px;
+  transition:all 500ms ease-in-out;
+}
+
+.tab {
+  cursor: pointer;
+  padding: 10px;
+}
+
+.tab.active {
+    height:20px;
+    width: 110px;
+    background: #0284FF;
+    color: #FFFFFF;
+    top:10px;
+    left:10px;
+    border-radius:20px;
+    transition:all 300ms ease-in-out;
+}
+
+.tab:hover {
+ 
+}
+
+.tab-content {
+  margin-left: 20px;
+  margin-right: 20px;
+  transition: .5s linear;
+}
+
+
+.pilihan {
+  display: flex;
+  background: #FFFFFF;
+  width: 340px;
+  height: 60px;
+  margin-top: -25px;
+  align-items: center;
+  margin-left: 1px;
+  border-radius: 15px;
+  transition:all 300ms ease-in-out;
+  border: 1.4px solid #0079FF;
+}
+.pilihan:hover {
+  border-radius: 25px;
+  transition:all 500ms ease-in-out;
+  box-shadow: 2px 3px 2px #3D3D3D29;
+}
+.pilihan img {
+  width: 130px;
+  height: 100px;
+  margin-left: 15px;
+}
+
+.pilihan i {
+  margin-left: 140px;
+  background: #0079FF;
+  padding: 11px 18px;
+  border-radius: 15px;
+  color: white;
+}
+
+
+
+  </style>
+  <div class="hero"></div>
+  <center>
+    <img class="mt24" src="https://i.ibb.co/gV3ZzGy/20210831-134137.jpg" style="width: 86%; border-radius: 20px; height: 150px" alt="" />
+  </center>
+
+
+<center>
+  <ul class="tabs">
+    <li data-tab-target="#home" class="active tab">game</li>
+    <li data-tab-target="#pricing" class="tab">lainya</li>
+  </ul>
+  
+</center>
+
+  <div class="tab-content">
+    <div id="home" data-tab-content class="active">
+    <center>
+        
+    </center>
+      <br>
+      <div class="pilihan" style="margin-top: -4px">
+        <img src="https://1.bp.blogspot.com/-aX-Kc-DVpcU/XDLGObIhYMI/AAAAAAAARSU/MetrYqB8eSQ8gMvZa-FQ9pZK_oLjzaAkACLcBGAs/s1600/Garena.png" alt="" />
+        <i class="fas fa-angle-right"></i>
+      </div>
+      <br><br><br>
+         <div class="pilihan">
+        <img src="https://1.bp.blogspot.com/-w9qFvxhF3m0/XxpQHQxLlyI/AAAAAAAADqg/lCmIXJMNZtwSa5DX90jMUMsWoI8R0IsogCK4BGAYYCw/s1600/Logo-UniPin-816x238.png" style="height: 30px; width: 130px" alt="" />
+        <i class="fas fa-angle-right"></i>
+      </div>
+    </div>
+    <div id="pricing" data-tab-content>
+      <br>
+      <div class="pilihan" style="margin-top: -4px">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Garena_Free_Fire_Logo.svg" alt="" />
+        <i class="fas fa-angle-right"></i>
+      </div>
+      <br><br><br>
+         <div class="pilihan">
+        <img src="https://1.bp.blogspot.com/-D7RNm2YWNbw/YPAiezdHTYI/AAAAAAAAY0E/prixO8xMeM8SoB-VJN47t_wpKkniTUH0ACPcBGAsYHg/s450/802220210630102533.png" style="height: 110px; width: 130px" alt="" />
+        <i class="fas fa-angle-right"></i>
+      </div>
+        <br><br><br>
+      <div class="pilihan">
+        <img src="https://logodownload.org/wp-content/uploads/2019/12/pubg-logo-1.png" alt="" style="height: 45px"/>
+        <i class="fas fa-angle-right"></i>
+      </div>
+    </div>
+    <div id="about" data-tab-content>
+      <h1>About</h1>
+      <p>Let me tell you about me</p>
+    </div>
+  </div>
+  </center>
+<script type="text/javascript" charset="utf-8">
+  
+const tabs = document.querySelectorAll('[data-tab-target]')
+const tabContents = document.querySelectorAll('[data-tab-content]')
+
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    const target = document.querySelector(tab.dataset.tabTarget)
+    tabContents.forEach(tabContent => {
+      tabContent.classList.remove('active')
+    })
+    tabs.forEach(tab => {
+      tab.classList.remove('active')
+    })
+    tab.classList.add('active')
+    target.classList.add('active')
+  })
+})
+</script>
+
+  <!-- Project -->
+  <script src="main.js"></script>
+</body>
+</html>
